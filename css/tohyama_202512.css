@@ -1,5 +1,5 @@
 /* ---------------------------------------------- */
-/* art67.css (ユーザー提供の基本スタイル)        */
+/* art67.css (基本スタイル) + art68.css (統合版) */
 /* ---------------------------------------------- */
 body {
   font-family: "Noto Sans JP", "Lucida Grande", Arial, sans-serif;
@@ -34,7 +34,7 @@ body {
 }
 
 /* =========================================================
-   1. ヘッダーデザインの更新
+   1. ヘッダーデザイン
    ========================================================= */
 /* タイトル + シリーズ名 + 日付 のコンテナ */
 .article-header {
@@ -80,18 +80,18 @@ h2.series-title {
 }
 
 /* =========================================================
-   2. 見出しデザインの更新 (H3, H4)
+   2. 見出しデザイン (H3, H4)
    ========================================================= */
 
-/* H3: 太字、大きく、下にスペース */
+/* H3: 太字、大きく、下にスペース (元のH2相当) */
 h3 {
-  font-size: 28px; /* 目立たせるために24pxから28pxに拡大 */
-  font-weight: bold; /* 太字 */
+  font-size: 28px;
+  font-weight: bold;
   color: #003366;
   width: fit-content;
   padding-right: 1.5em;
-  margin-top: 60px; /* 上のスペース */
-  margin-bottom: 30px; /* 下のスペース (<p>に対して) - 要望 */
+  margin-top: 60px;
+  margin-bottom: 30px;
   border-bottom: solid 2px #ccc;
   position: relative;
 }
@@ -105,15 +105,15 @@ h3::after {
   background-color: #003366;
 }
 
-/* H4: 標準サイズ (約)、太字、上下にスペース */
+/* H4: 標準サイズ (約)、太字、上下にスペース (元のH3相当) */
 h4 {
-  font-size: 18px; /* H3より少し小さく、本文に近いが区別できるサイズ */
-  font-weight: bold; /* 見出しの明確さのために太字を維持 */
+  font-size: 18px;
+  font-weight: bold;
   color: #444;
   width: fit-content;
   padding-right: 1.5em;
-  margin-top: 40px; /* 上のスペース (前のテキストに対して) - 要望 */
-  margin-bottom: 20px; /* 下のスペース (次のテキストに対して) - 要望 */
+  margin-top: 40px;
+  margin-bottom: 20px;
   border-bottom: dotted 1px gray;
 }
 
@@ -124,7 +124,7 @@ p {
 }
 
 /* =========================================================
-   3. Tailwindクラスの置換用スタイル
+   3. 共通コンポーネント
    ========================================================= */
 
 /* フォーミュラボックス */
@@ -146,28 +146,19 @@ p {
 .page-footer {
   text-align: center;
   padding: 24px 0;
-  color: #6b7280; /* text-gray-500 equivalent */
-  font-size: 14px; /* text-sm equivalent */
-  border-top: 1px solid #e5e7eb; /* border-gray-200 equivalent */
+  color: #6b7280;
+  font-size: 14px;
+  border-top: 1px solid #e5e7eb;
   margin-top: 40px;
   background-color: white;
 }
 
-/* =========================================================
-   その他のスタイル
-   ========================================================= */
-
+/* セクション */
 section.chapter {
   margin-top: 50px;
 }
 
-section.footer {
-  margin-top: 12px;
-  margin-bottom: 5px;
-  padding: 2px;
-}
-
-/* グラフコンテナのスタイル */
+/* グラフコンテナ */
 .graph-container {
   display: flex;
   flex-wrap: wrap;
@@ -199,118 +190,244 @@ section.footer {
   text-align: left;
   padding-left: 10px;
 }
-.wrap-grp p.wpn2 {
-  position: static;
-}
 
-/* 装飾 */
+/* 装飾ユーティリティ */
 .nrm {
   font-weight: normal;
 }
 .keyword1 {
   font-weight: bold;
-  color: #003366;
+  color: #003366; /* index.htmlのテーマカラーに合わせ調整 */
 }
 .bold {
   font-weight: bold;
 }
-.sup5 {
-  font-size: 80%;
-  vertical-align: super;
-}
-
-/* テーブルのスタイル */
-table.art67-table {
-  border-collapse: collapse;
-  font-size: 16px;
-  margin: 30px auto;
-  width: 95%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-table.art67-table caption {
-  white-space: nowrap;
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-table.art67-table th,
-table.art67-table td {
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: 12px 15px;
-}
-
-table.art67-table th {
-  background-color: #003366;
-  color: white;
-  font-weight: normal;
-}
-
-table.art67-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* モバイル用テーブルスクロールラッパー */
-.table-scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin-bottom: 20px;
-}
-
-.table-scroll table.art67-table {
-  min-width: 600px;
-  width: 100%;
-}
-
-/* 定義リスト */
-dl.art67-dl {
-  margin-left: 20px;
-}
-dl.art67-dl dt {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #003366;
-}
-dl.art67-dl dd {
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-.smlftB {
-  font-size: 86%;
-}
-.inblock-keyword {
-  display: inline-block;
-  font-weight: bold;
-  font-size: 105%;
-  border: 1px solid #cc0000;
-  color: #cc0000;
-  padding: 5px 15px;
-  background-color: #fff5f5;
-  border-radius: 4px;
-}
-
-.nwrap {
-  white-space: nowrap;
-}
-
 .zudlg1 {
   text-decoration: underline 2px solid #28a745;
   text-underline-offset: 0.2em;
 }
-
 .zudlr1 {
   text-decoration: underline 2px solid #dc3545;
   text-underline-offset: 0.2em;
 }
 
 /* ---------------------------------------------- */
-/* ヘッダーとメニューのスクリプトサポート        */
+/* art68.css から統合・調整したスタイル             */
+/* ---------------------------------------------- */
+
+/* 用語説明のボックス */
+div.rnknt1 {
+  max-width: 1000px;
+  margin-left: 10px;
+  margin-bottom: 22px;
+  padding: 15px;
+  font-size: 15px;
+  border: 1px dotted #555; /* color調整 */
+  background-color: #fff;
+}
+
+div.rnknt1 dl {
+  margin: 0;
+  padding: 0;
+}
+div.rnknt1 dl dt {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+  font-weight: bold;
+  color: #003366;
+}
+div.rnknt1 dl dd {
+  margin-top: 0;
+  margin-left: 18px;
+  margin-bottom: 12px;
+  padding: 0;
+  line-height: 1.6;
+}
+
+div.rnknt1 ul {
+  list-style-type: disc;
+  margin: 0.3em 1em 0.3em 0;
+  padding-left: 1.5em;
+}
+div.rnknt1 ul li {
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+div.rnknt1 span.pstd {
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+/* ランキングテーブル (table.rnktbl5) */
+table.rnktbl5 {
+  border-collapse: collapse;
+  margin: 20px auto 50px auto; /* センタリングに変更 */
+  font-size: 14px; /* 少し小さめに調整 */
+  width: 100%;
+  max-width: 100%;
+  border: double 3px #333; /* 外枠を強調 */
+}
+
+table.rnktbl5 caption {
+  font-weight: bold;
+  margin: 0 0 8px 3px;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+table.rnktbl5 th {
+  background-color: #eaece6;
+  font-weight: normal;
+  border: 1px solid #666;
+  white-space: nowrap;
+  padding: 6px 4px;
+  vertical-align: middle;
+}
+
+table.rnktbl5 td {
+  border: 1px solid #666;
+  white-space: nowrap;
+  padding: 6px 4px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* セルの微調整 */
+table.rnktbl5 td.npadd {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* 罫線の強調 (art68.cssのロジックを継承) */
+table.rnktbl5 tr:nth-child(1) th:nth-child(n + 6):nth-child(-n + 8) {
+  border-right: 2px solid #333;
+}
+table.rnktbl5
+  tr:nth-child(2)
+  th:nth-child(3n-1):nth-child(n + 8):nth-child(-n + 14) {
+  border-right: 2px solid #333;
+}
+table.rnktbl5 td:nth-child(3n + 1):nth-child(n + 13):nth-child(-n + 19) {
+  border-right: 2px solid #333;
+}
+
+/* フォントサイズ調整 */
+table.rnktbl5 tr:nth-child(2) th {
+  font-size: 90%;
+}
+table.rnktbl5 tr:nth-child(1) th:nth-child(4) {
+  line-height: 1.25;
+}
+table.rnktbl5 tr:nth-child(1) th:nth-child(4) span {
+  font-size: 85%;
+}
+table.rnktbl5 tr:nth-child(1) th:nth-child(5) {
+  line-height: 1.25;
+}
+
+/* 列ごとのスタイル */
+table.rnktbl5 td:nth-child(2) {
+  /* 選手名 */
+  text-align: left;
+  font-weight: 500;
+  min-width: 6em;
+}
+table.rnktbl5 td:nth-child(9) {
+  /* 競走得点 */
+  text-align: right;
+  font-family: monospace; /* 数字を見やすく */
+  padding-right: 8px;
+}
+table.rnktbl5 td:nth-child(10) {
+  /* 1着 2着 */
+  text-align: right;
+}
+table.rnktbl5 td:nth-child(10) span {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+
+/* 縦長文字クラスのシミュレーション (scale使用) */
+table.rnktbl5 span.t-narrow {
+  display: inline-block;
+  transform: scale(0.85, 1);
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+/* ヘッダー内装飾 */
+table.rnktbl5 .lhr {
+  line-height: 1.1;
+  font-size: 90%;
+}
+table.rnktbl5 span.all {
+  display: block;
+  text-align: left;
+  font-size: 90%;
+}
+table.rnktbl5 span.alr {
+  display: block;
+  text-align: right;
+  font-size: 90%;
+}
+table.rnktbl5 .sml {
+  font-size: 85%;
+}
+
+/* 背景色クラス (art68.cssより) */
+table.rnktbl5 .lhs {
+  background-color: #c1d0d3;
+} /* 競り込みヘッダ */
+table.rnktbl5 .lht {
+  background-color: #c6d6c5;
+} /* 飛び付きヘッダ */
+
+.bkj1 {
+  background-color: #ffffd0;
+} /* 選手背景1 */
+.bkj2 {
+  background-color: #d0ffd0;
+} /* 選手背景2 */
+.bkj3 {
+  background-color: #f4d8d8;
+} /* 選手背景3 */
+
+.lis3 {
+  background-color: #c2c2ff;
+} /* 競込みベスト3 */
+.lis4 {
+  background-color: #e5e5f9;
+} /* 競込み4位以下 */
+.lit3 {
+  background-color: #b2edb2;
+} /* 飛付きベスト3 */
+.lit4 {
+  background-color: #dffbe0;
+} /* 飛付き4位以下 */
+
+.nige2 {
+  background-color: #fadfd5;
+} /* バック20% */
+.nige4 {
+  background-color: #f3ab90;
+} /* バック40% */
+
+/* テーブルスクロールラッパー (index.htmlと共通化) */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+}
+.table-scroll table.rnktbl5 {
+  min-width: 800px; /* 横スクロール発生幅 */
+}
+
+/* ---------------------------------------------- */
+/* ヘッダーとメニューのスクリプトサポート (JS用) */
 /* ---------------------------------------------- */
 .header {
   position: fixed;
@@ -430,16 +547,6 @@ dl.art67-dl dd {
 .main_section.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-img.grp-double:not([src]) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f0f0f0;
-  color: #666;
-  font-size: 14px;
-  height: 300px;
 }
 
 .lab-logo-text {
