@@ -1,0 +1,540 @@
+/* ---------------------------------------------- */
+/* art67.css (ユーザー提供の基本スタイル)        */
+/* ---------------------------------------------- */
+body {
+  font-family: "Noto Sans JP", "Lucida Grande", Arial, sans-serif;
+  font-size: 16px; /* 基本フォントサイズ */
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+#bdy {
+  max-width: 1200px;
+  margin: 80px auto 40px auto;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  position: relative;
+}
+
+/* モバイル用レスポンシブ調整 */
+@media (max-width: 768px) {
+  #bdy {
+    margin: 60px 10px 20px 10px;
+    padding: 20px;
+  }
+  .grp-double {
+    width: 100% !important;
+  }
+}
+
+/* =========================================================
+   1. ヘッダーデザインの更新
+   ========================================================= */
+/* タイトル + シリーズ名 + 日付 のコンテナ */
+.article-header {
+  border-bottom: 2px solid #003366; /* 全体の下に線を引く */
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+/* メインタイトル: 大きく太字 */
+h1.main-title {
+  font-family: "Noto Serif JP", serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px; /* 次の行との最小限のスペース */
+  color: #003366;
+  border-bottom: none; /* H1の直下には線を引かない */
+}
+
+/* シリーズタイトルと日付の行 */
+.subtitle-row {
+  display: flex;
+  justify-content: space-between; /* シリーズは左、日付は右 */
+  align-items: flex-end;
+}
+
+/* シリーズタイトル: メインタイトルより小さく */
+h2.series-title {
+  font-size: 18px; /* H1 (32px) より明確に小さく */
+  font-weight: bold;
+  color: #555;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* 日付 */
+.date_suf2 {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* =========================================================
+   2. 見出しデザインの更新 (H3, H4)
+   ========================================================= */
+
+/* H3: 太字、大きく、下にスペース */
+h3 {
+  font-size: 28px; /* 目立たせるために24pxから28pxに拡大 */
+  font-weight: bold; /* 太字 */
+  color: #003366;
+  width: fit-content;
+  padding-right: 1.5em;
+  margin-top: 60px; /* 上のスペース */
+  margin-bottom: 30px; /* 下のスペース (<p>に対して) - 要望 */
+  border-bottom: solid 2px #ccc;
+  position: relative;
+}
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 30%;
+  height: 2px;
+  background-color: #003366;
+}
+
+/* H4: 標準サイズ (約)、太字、上下にスペース */
+h4 {
+  font-size: 18px; /* H3より少し小さく、本文に近いが区別できるサイズ */
+  font-weight: bold; /* 見出しの明確さのために太字を維持 */
+  color: #444;
+  width: fit-content;
+  padding-right: 1.5em;
+  margin-top: 40px; /* 上のスペース (前のテキストに対して) - 要望 */
+  margin-bottom: 20px; /* 下のスペース (次のテキストに対して) - 要望 */
+  border-bottom: dotted 1px gray;
+}
+
+/* 段落の間隔 */
+p {
+  margin: 0 0 16px 0; /* 標準的な段落の間隔 */
+  text-align: justify;
+}
+
+/* =========================================================
+   3. Tailwindクラスの置換用スタイル
+   ========================================================= */
+
+/* フォーミュラボックス */
+.formula-box {
+  text-align: center;
+  padding: 16px 0;
+}
+
+/* 箇条書きリスト */
+.class-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 20px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* ページフッター */
+.page-footer {
+  text-align: center;
+  padding: 24px 0;
+  color: #6b7280; /* text-gray-500 equivalent */
+  font-size: 14px; /* text-sm equivalent */
+  border-top: 1px solid #e5e7eb; /* border-gray-200 equivalent */
+  margin-top: 40px;
+  background-color: white;
+}
+
+/* =========================================================
+   その他のスタイル
+   ========================================================= */
+
+section.chapter {
+  margin-top: 50px;
+}
+
+section.footer {
+  margin-top: 12px;
+  margin-bottom: 5px;
+  padding: 2px;
+}
+
+/* グラフコンテナのスタイル */
+.graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.grp-double {
+  width: 520px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+.wrap-grp {
+  position: relative;
+  text-align: center;
+}
+
+.wrap-grp p {
+  position: static;
+  font-size: 15px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 8px;
+  text-align: left;
+  padding-left: 10px;
+}
+.wrap-grp p.wpn2 {
+  position: static;
+}
+
+/* 装飾 */
+.nrm {
+  font-weight: normal;
+}
+.keyword1 {
+  font-weight: bold;
+  color: #003366;
+}
+.bold {
+  font-weight: bold;
+}
+.sup5 {
+  font-size: 80%;
+  vertical-align: super;
+}
+
+/* テーブルのスタイル */
+table.art67-table {
+  border-collapse: collapse;
+  font-size: 16px;
+  margin: 30px auto;
+  width: 95%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+table.art67-table caption {
+  white-space: nowrap;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+table.art67-table th,
+table.art67-table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 12px 15px;
+}
+
+table.art67-table th {
+  background-color: #003366;
+  color: white;
+  font-weight: normal;
+}
+
+table.art67-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* モバイル用テーブルスクロールラッパー */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+}
+
+.table-scroll table.art67-table {
+  min-width: 600px;
+  width: 100%;
+}
+
+/* 定義リスト */
+dl.art67-dl {
+  margin-left: 20px;
+}
+dl.art67-dl dt {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #003366;
+}
+dl.art67-dl dd {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.smlftB {
+  font-size: 86%;
+}
+.inblock-keyword {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 105%;
+  border: 1px solid #cc0000;
+  color: #cc0000;
+  padding: 5px 15px;
+  background-color: #fff5f5;
+  border-radius: 4px;
+}
+
+.nwrap {
+  white-space: nowrap;
+}
+
+.zudlg1 {
+  text-decoration: underline 2px solid #28a745;
+  text-underline-offset: 0.2em;
+}
+
+.zudlr1 {
+  text-decoration: underline 2px solid #dc3545;
+  text-underline-offset: 0.2em;
+}
+
+/* ---------------------------------------------- */
+/* ヘッダーとメニューのスクリプトサポート        */
+/* ---------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gamboo_logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.hamburger {
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .hamburger-bar:nth-child(1) {
+  transform: translateY(10.5px) rotate(45deg);
+}
+.hamburger.active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .hamburger-bar:nth-child(3) {
+  transform: translateY(-10.5px) rotate(-45deg);
+}
+
+.menu_off {
+  position: fixed;
+  top: 60px;
+  right: -100%;
+  width: 100%;
+  max-width: 300px;
+  height: calc(100vh - 60px);
+  background-color: rgba(0, 51, 102, 0.95);
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.menu_on {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  max-width: 300px;
+  height: calc(100vh - 60px);
+  background-color: rgba(0, 51, 102, 0.95);
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu_on p,
+.menu_off p {
+  margin: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.menu_on a,
+.menu_off a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+.menu_on a:hover {
+  color: #ffcc00;
+}
+
+/* ---------------------------------------------- */
+/* アニメーションとUXクラス                     */
+/* ---------------------------------------------- */
+.main_section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.main_section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+img.grp-double:not([src]) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  color: #666;
+  font-size: 14px;
+  height: 300px;
+}
+
+.lab-logo-text {
+  font-family: "Noto Serif JP", serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #003366;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#toc-container {
+  background-color: #f4f8fb;
+  border: 1px solid #dbe4ed;
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin: 30px 0 50px 0;
+}
+
+#toc-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#toc-container > ul > li {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #003366;
+}
+
+#toc-container ul ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+#toc-container ul ul li {
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#toc-container a {
+  text-decoration: none;
+  color: #003366;
+  transition: color 0.2s;
+}
+
+#toc-container a:hover {
+  color: #cc0000;
+  text-decoration: underline;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover {
+  background-color: #004080;
+  transform: translateY(-3px);
+}
+
+.markerY {
+  background: linear-gradient(transparent 60%, rgba(255, 228, 0, 0.5) 60%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: background-size 0.8s ease-out;
+}
+
+.markerY.active {
+  background-size: 100% 100%;
+}

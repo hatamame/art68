@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3連単車券の人気順と回収率の関係を調査 | 遠山競輪研究所</title>
+    <!-- OGP & Favicon -->
+    <meta
+      property="og:title"
+      content="3連単車券の人気順と回収率の関係を調査 | 遠山競輪研究所"
+    />
+    <meta
+      property="og:description"
+      content="「3連単のn番人気を買い続けると回収率はどうなるのか」をテーマに、過去5年間のレースデータをもとに徹底検証。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://gamboo.jp/pages/?tid=tohyama_index_2024"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS Removed -->
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/css/tohyama_202512.css?v=2" />
+  </head>
+  <body>
+    <!-- Article Content -->
+    <article id="bdy">
+      <!-- ヘッダーエリア -->
+      <header class="article-header">
+        <h1 class="main-title">3連単車券の人気順と回収率の関係を調査</h1>
+        <div class="subtitle-row">
+          <h2 class="series-title">車券回収率アップ大作戦！ #1</h2>
+          <span class="date_suf2">2025.12.01</span>
+        </div>
+      </header>
+
+      <!-- Table of Contents Container -->
+      <div id="toc-container"></div>
+
+      <div class="intro-text">
+        <p>
+          「3連単の n 番人気を買い続けると回収率はどうなるのか」。<br />
+          この素朴な疑問を出発点に、実際のレースデータをもとに検証を行った。<br />
+          さらに、S級・A級・ガールズといったクラスの違いや、バンク周長の違いによってその傾向が変わるのかについても検証している。<br />
+          対象としたのは、過去5年間（2020年10月～2025年9月）に行われた全レースだ。
+        </p>
+      </div>
+
+      <!-- Chapter 1 -->
+      <section class="chapter main_section" id="chaper1">
+        <h3>A級1･2班戦の車券人気順と回収率の関係</h3>
+        <p>
+          n番人気車券を購入しつづけた場合の<span class="zudlg1"
+            >回収率（車券購入金額に対する払戻金額の割合）</span
+          >は、’n番人気車券の的中率’および’的中平均配当’を使って次式で得られる。
+        </p>
+        <!-- Tailwind class removed, replaced with custom class -->
+        <p class="formula-box">
+          <span class="inblock-keyword"
+            >回収率&thinsp;＝&thinsp;的中率&thinsp;×&thinsp;的中平均配当</span
+          >
+        </p>
+        <p>
+          以下に、過去5年（2020年10月～2025年9月）のA級1･2班戦7車立てレースの3連単車券を対象として、「車券人気順
+          vs 的中率」、「車券人気順 vs 的中平均配当」、そして「車券人気順 vs
+          回収率」を調査した結果を順に示す。
+        </p>
+
+        <section class="section">
+          <h4>車券人気順 vs 的中率</h4>
+          <p>
+            図1は、3連単車券
+            1番人気～210番人気の的中率をプロットし、折れ線で結んだグラフである。<br />
+            上位人気側では的中率は急減するが、下位人気側では緩やかな減少となっている。
+          </p>
+          <p>
+            図2は、人気順が大きい領域（下位人気側）の変化を明確にするために、両対数グラフ（log-logスケール）に再プロットしたものだ。<br />
+            40番人気付近までは直線的に減少しており（赤線は40番人気までの近似直線）、べき乗分布の特徴が確認できる。<br />
+            しかし40番人気を越えるあたりから、的中率は近似直線から離れて減少の度合いが加速する。
+          </p>
+
+          <div class="graph-container">
+            <div class="wrap-grp">
+              <p>図1.</p>
+              <img
+                src="/images/tohyama/tohyama_article_2025/art67_grp1.png"
+                alt="車券人気順 vs 的中率"
+                class="grp-double"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22460%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f4f4f4%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20fill%3D%22%23666%22%3EGraph%20Image%201%20Not%20Found%3C%2Ftext%3E%3C%2Fsvg%3E';"
+              />
+            </div>
+            <div class="wrap-grp">
+              <p>図2.</p>
+              <img
+                src="/images/tohyama/tohyama_article_2025/art67_grp2.png"
+                alt="車券人気順 vs 的中率(両対数)"
+                class="grp-double"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22460%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f4f4f4%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20fill%3D%22%23666%22%3EGraph%20Image%202%20Not%20Found%3C%2Ftext%3E%3C%2Fsvg%3E';"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h4>車券人気順 vs 的中平均配当</h4>
+          <p>
+            図3は、的中平均配当をY軸にして、両対数グラフにプロットしたものだ。<br />
+            「車券人気順 vs
+            的中率」のグラフとは逆に、人気順が大きい領域で傾きが上向きに加速している。
+          </p>
+          <div class="graph-container">
+            <div class="wrap-grp">
+              <p>図3.</p>
+              <img
+                src="/images/tohyama/tohyama_article_2025/art67_grp3.png"
+                alt="的中平均配当"
+                class="grp-double"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22460%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f4f4f4%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20fill%3D%22%23666%22%3EGraph%20Image%203%20Not%20Found%3C%2Ftext%3E%3C%2Fsvg%3E';"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h4>車券人気順 vs 回収率</h4>
+          <p>
+            図4は、回収率をY軸にして、Y軸は通常目盛りの片対数グラフにプロットしたものだ。
+            ただし、傾向を見やすくするために、各点を結んだ折れ線とはせずに、5点移動平均点を曲線で結んでいる。<br />
+            ちなみに、1番人気～210番人気の平均回収率は、図内に赤線で示した60.5%である。つまり、<span
+              class="markerY"
+              >3連単車券の全通りを購入し続けた場合の回収率は60.5%</span
+            >となる。
+          </p>
+          <div class="graph-container">
+            <div class="wrap-grp">
+              <p>図4.</p>
+              <img
+                src="/images/tohyama/tohyama_article_2025/art67_grp4.png"
+                alt="回収率グラフ"
+                class="grp-double"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22460%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f4f4f4%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20fill%3D%22%23666%22%3EGraph%20Image%204%20Not%20Found%3C%2Ftext%3E%3C%2Fsvg%3E';"
+              />
+            </div>
+          </div>
+          <p>図4を人気帯ごとに分けて特徴を読み取ると、次のようになる。</p>
+          <dl class="art67-dl">
+            <dt>（1）1番人気～9番人気</dt>
+            <dd>
+              <span class="markerY">回収率は75%近辺で安定し</span
+              >、バラつきも小さい。
+            </dd>
+            <dt>（2）10番人気～39番人気</dt>
+            <dd>
+              <span class="markerY">回収率は平均すると75%前後</span
+              >だが、80%近辺の高い点も存在する。
+            </dd>
+            <dt>（3）40番人気～99番人気</dt>
+            <dd>
+              <span class="markerY">回収率の中心は75%から60%へ下がっていき</span
+              >、バラつきは53%～80%の範囲へ広がる。
+            </dd>
+            <dt>（4）100番人気以降</dt>
+            <dd>
+              <span class="markerY">回収率の中心は60%を割ってきて</span
+              >、バラつきはさらに大きくなる。
+            </dd>
+          </dl>
+          <p>
+            下位人気側で回収率が下がってくるのは、図2における下位人気側での的中率の下がり具合に対して、図3での下位人気側での的中平均配当の上がり具合が鈍いというのが原因だ。<br />
+            つまり、<span class="markerY"
+              >下位人気側の車券は実力以上に売れている（車券の実力よりオッズが低い）</span
+            >ということだ。
+          </p>
+        </section>
+      </section>
+
+      <!-- Chapter 2 -->
+      <section class="chapter main_section" id="chaper2">
+        <h3>クラス別の車券人気順と回収率の関係</h3>
+        <p>
+          上ではA級1･2班戦についての調査結果を示した。では他のクラスではどうだろうか？<br />
+          ここではレースを次の5つのクラスに分類し、それぞれの「車券人気順と回収率の関係」を下にグラフ化した。
+        </p>
+        <!-- Tailwind class removed, replaced with custom class -->
+        <ul class="class-list">
+          <li>S級戦9車立て</li>
+          <li>S級戦7車立て</li>
+          <li>A1･2班戦7車立て</li>
+          <li>チャレンジ7車立て</li>
+          <li>ガールズ7車立て</li>
+        </ul>
+        <p>
+          グラフはバラつきを抑えて回収率を見やすくするため、車券人気順を対数目盛り上でほぼ均等幅となるよう10の人気帯に分割し、各帯の平均回収率をプロットしたものだ。<br />
+          対象は上と同じ直近5年間のレースで、5車立て・6車立て・8車立て、および当日欠場があったレースは除外している。
+        </p>
+        <p>
+          男子レースとガールズケイリンでは特徴が異なるため、見やすさを考慮して別グラフに分けて表示した。<br />
+          図5は男子レースのクラス別、図6はガールズケイリンの結果である。
+        </p>
+
+        <div class="graph-container">
+          <div class="wrap-grp">
+            <p class="wpn2">図5.</p>
+            <img
+              src="/images/tohyama/tohyama_article_2025/art67_grp5.png"
+              alt="クラス別男子"
+              class="grp-double"
+              onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22460%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f4f4f4%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20fill%3D%22%23666%22%3EGraph%20Image%205%20Not%20Found%3C%2Ftext%3E%3C%2Fsvg%3E';"
+            />
+          </div>
+          <div class="wrap-grp">
+            <p class="wpn2">図6.</p>
+            <img
+              src="/images/tohyama/tohyama_article_2025/art67_grp6.png"
+              alt="クラス別ガールズ"
+              class="grp-double"
+              onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22460%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f4f4f4%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20fill%3D%22%23666%22%3EGraph%20Image%206%20Not%20Found%3C%2Ftext%3E%3C%2Fsvg%3E';"
+            />
+          </div>
+        </div>
+
+        <p>グラフからわかるクラス別の特徴をまとめると、次のようになる。</p>
+        <div>
+          <dl class="art67-dl">
+            <dt>（1）S級戦9車立て</dt>
+            <dd>
+              <span class="markerY">1番人気の回収率がかなり高い。</span><br />
+              2～19番人気では70%台後半をキープし、20～99番人気では70%台前半。<br />
+              100番人気以上では70%を割って急減していく。
+            </dd>
+            <dt>（2）S級戦7車立て</dt>
+            <dd>
+              <span class="markerY">回収率が高いのは7～19番人気。</span><br />
+              70番人気以上になると回収率は65%をを割って急減していく。
+            </dd>
+            <dt>（3）A級1･2班戦7車立て</dt>
+            <dd>
+              <span class="markerY">回収率が高いのは7～19番人気。</span><br />
+              40番人気以上になると回収率は70%をを割って急減していく。
+            </dd>
+            <dt>（4）チャレンジ7車立て</dt>
+            <dd>
+              <span class="markerY">回収率が最も高いのは1番人気。</span><br />
+              20番人気以上になると回収率は70%をを割って急減していく。
+            </dd>
+            <dt>（5）ガールズ7車立て</dt>
+            <dd>
+              <span class="markerY">1番人気の回収率がかなり低い。</span><br />
+              <span class="markerY">回収率が高いのは4～19番人気。</span><br />
+              20番人気以上になると回収率は70%をを割って急減していく。
+            </dd>
+          </dl>
+        </div>
+
+        <p>
+          クラスごとに「<span class="zudlr1">回収率が最も高い人気帯</span
+          >」および「<span class="zudlr1">回収率が70％を超える人気帯</span
+          >」を整理すると、下表のようになる。
+        </p>
+
+        <div class="table-scroll">
+          <table class="art67-table">
+            <caption>
+              表1. 回収率が最も高い人気帯と回収率70%越えの人気帯
+            </caption>
+            <thead>
+              <tr>
+                <th>クラス</th>
+                <th>回収率が最も高い人気帯</th>
+                <th>回収率70%越えの人気帯</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>S級戦9車立て</th>
+                <td>1番人気</td>
+                <td>1～99番人気</td>
+              </tr>
+              <tr>
+                <th>S級戦7車立て</th>
+                <td>10～19番人気</td>
+                <td>1～69番人気</td>
+              </tr>
+              <tr>
+                <th>A級1･2班戦7車立て</th>
+                <td>10～19番人気</td>
+                <td>1～39番人気</td>
+              </tr>
+              <tr>
+                <th>チャレンジ7車立て</th>
+                <td>1番人気</td>
+                <td>1～19番人気</td>
+              </tr>
+              <tr>
+                <th>ガールズ7車立て</th>
+                <td>4～6番人気</td>
+                <td>2～19番人気</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Chapter 3 -->
+      <section class="chapter main_section" id="chaper3">
+        <h3>バンク周長による違い</h3>
+        <p>
+          次に、バンク周長によって「車券人気順と回収率の関係」に違いがあるのかを検証した。<br />
+          統計的な検証（カイ二乗検定）の結果、ガールズケイリンではバンク周長による有意な差は確認できなかった。<br />
+          一方、男子レースでは400バンクと500バンクの間に違いは見られなかったものの、<span
+            class="markerY"
+            >33バンクと400／500バンクの間では明確な差が確認された。</span
+          >
+        </p>
+        <p>
+          クラスによって結果に多少のバラつきはあるが、傾向をわかりやすく示すため、ここでは男子7車立てレース（S級戦・A級1･2班戦・チャレンジ）の合算値をグラフ化した。
+        </p>
+
+        <div class="graph-container">
+          <div class="wrap-grp">
+            <p class="wpn2">図7.</p>
+            <img
+              src="/images/tohyama/tohyama_article_2025/art67_grp7.png"
+              alt="バンク周長比較"
+              class="grp-double"
+              onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22460%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f4f4f4%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20fill%3D%22%23666%22%3EGraph%20Image%207%20Not%20Found%3C%2Ftext%3E%3C%2Fsvg%3E';"
+            />
+          </div>
+        </div>
+
+        <p>
+          男子7車立てレースについて、グラフから分かることをまとめると、次のようになる。
+        </p>
+        <dl class="art67-dl">
+          <dt>（1）上位人気（1～9番人気）</dt>
+          <dd>
+            <span class="markerY">33バンクの回収率が明確に高く</span
+            >、特に1番人気では約5％の差がついた。
+          </dd>
+          <dt>（2）中位人気（10～69番人気）</dt>
+          <dd>
+            <span class="markerY">ここでは400／500バンクが優勢</span
+            >で、上位人気とは逆の傾向が現れた。
+          </dd>
+          <dt>（3）下位人気（70番人気以降）</dt>
+          <dd>
+            いずれも大きく低下するが、<span class="markerY">差は小さく</span
+            >、むしろ33バンクがやや上回る場面もある。
+          </dd>
+          <dt>（4）<span class="zudlr1">回収率が75%を越える人気帯</span></dt>
+          <dd>
+            <span class="markerY"
+              >33バンクでは1～9番人気。400／500バンクでは4～19番人気。</span
+            >
+          </dd>
+        </dl>
+      </section>
+    </article>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <p>&copy; 2025 Tohyama Keirin Research Institute. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Top">↑</button>
+
+    <!-- External Script -->
+    <script src="/js/tohyama/tohyama_202512.js"></script>
+  </body>
+</html>
