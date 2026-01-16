@@ -349,7 +349,7 @@ table.rnktbl5 tr:hover td {
 /* 特定の列の調整 */
 table.rnktbl5 td:nth-child(2) {
   /* 選手名 */
-  text-align: left;
+  text-align: center; /* 左寄せから中央揃えに変更 */
   font-weight: 600;
   min-width: 7em;
   color: #111;
@@ -366,16 +366,24 @@ table.rnktbl5 td:nth-child(9) {
 
 table.rnktbl5 td:nth-child(10) {
   /* 1着 2着 */
-  text-align: right;
-  padding-right: 10px;
+  text-align: center;
+  padding-right: 4px;
   vertical-align: middle;
+  white-space: nowrap; /* 折り返し防止 */
 }
 
-/* 1着数・2着数を改行して表示 */
+/* 1着数・2着数の表示調整: 改行をやめてハイフン区切りに */
 table.rnktbl5 td:nth-child(10) span {
-  display: block;
+  display: inline; /* ブロック表示をやめる */
   line-height: 1.4;
   text-align: center;
+}
+
+/* 1つ目のspan（1着数）の後にハイフンを追加 */
+table.rnktbl5 td:nth-child(10) span:first-child::after {
+  content: " - ";
+  margin: 0 4px;
+  color: #999;
 }
 
 /* セル内の微調整用クラス */
