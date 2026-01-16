@@ -4,244 +4,326 @@
 /*    中味は前回および前々回の競り・飛付きランキング(2025前,2024後)の  */
 /*    art66.css および art63.css と同じ                                */
 /* ------------------------------------------------------------------- */
-body{
-  font-family:"Lucida Grande",Arial,sans-serif;
-  font-size:15px;
-  text-align:left;
+body {
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: 15px;
+  text-align: left;
   margin: 0 auto;
-  padding:0;
-  line-height:1.4;
-  max-width:1200px;
+  padding: 0;
+  line-height: 1.4;
+  max-width: 1200px;
 }
-h1{
-  font-size:24px;
-  margin-top:20px;
-  margin-bottom:20px;
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.date_suff{
-  font-size:14px;
-  font-weight:normal;
-  color:gray;
+.date_suff {
+  font-size: 14px;
+  font-weight: normal;
+  color: gray;
 }
-h2{
-  font-size:18px;
-  font-weight:bold;
-  margin:15px 10px 14px 0px;
-  padding-left:2px;
-  border-bottom:1px dotted gray;
-  width:500px;
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 10px 14px 0px;
+  padding-left: 2px;
+  border-bottom: 1px dotted gray;
+  width: 500px;
 }
-h3{
-  font-size:16px;
-  font-weight:bold;
-  margin:18px 10px 14px 0px;
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 18px 10px 14px 0px;
 }
-p{
-  margin:12px 0px 12px 0px;
-  padding:0;
-  max-width:1000px;      /* 横に長い文は作らない（読みにくい） Max1000px とする */
+p {
+  margin: 12px 0px 12px 0px;
+  padding: 0;
+  max-width: 1000px; /* 横に長い文は作らない（読みにくい） Max1000px とする */
 }
-div{
-  margin:0;
-  padding:0;
+div {
+  margin: 0;
+  padding: 0;
 }
-#bdy{ margin:4px 5px 15px 16px; }
-#intro{
-  margin-top:20px;
-  margin-bottom:20px;
+#bdy {
+  margin: 4px 5px 15px 16px;
 }
-#sec0,#sec1,#sec2,#sec3,#footnote{
-  margin-top:5px;
-  margin-bottom:5px;
-  padding:2px;
+#intro {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#sec0,
+#sec1,
+#sec2,
+#sec3,
+#footnote {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px;
 }
 
 /* 基本のリスト */
-ul{
-  list-style-type:none;
-  max-width:1000px;
+ul {
+  list-style-type: none;
+  max-width: 1000px;
   margin: 10px 0px 20px 0px;
   padding: 0;
 }
-ul li{
+ul li {
   margin: 0 0 0.4em 0em;
-  line-height:1.4;
-  text-indent: -1em;           /* 本文内に ・等のマーク1文字を想定 */
+  line-height: 1.4;
+  text-indent: -1em; /* 本文内に ・等のマーク1文字を想定 */
   padding: 0 0 0 1.2em;
 }
-ol{
-  max-width:1000px;        /* 横に長い文は作らない（読みにくい） Max1000px とする */
+ol {
+  max-width: 1000px; /* 横に長い文は作らない（読みにくい） Max1000px とする */
   padding: 0;
 }
 
 /* 基本の表 */
-table{
+table {
   border-collapse: collapse;
-  margin:15px 0px 25px 8px;
+  margin: 15px 0px 25px 8px;
 }
-caption{
-  font-weight:bold;
-  margin:0 0 5px 3px;
-  text-align:left;
+caption {
+  font-weight: bold;
+  margin: 0 0 5px 3px;
+  text-align: left;
 }
-th{
-  background-color:#eaece6;
-  font-weight:normal;
-} 
-th,td{
-  white-space:nowrap;
-  text-align:center; 
-  padding:2px 6px;
-  border:1px solid gray;
+th {
+  background-color: #eaece6;
+  font-weight: normal;
+}
+th,
+td {
+  white-space: nowrap;
+  text-align: center;
+  padding: 2px 6px;
+  border: 1px solid gray;
 }
 
 /* 装飾 */
-.nrm{ font-weight:normal; }             /* 標準太さのフォント */
-.keyword1{ font-weight:bold; color:#000080; }
-.cyclist{  font-weight:bold; }          /* article40,45 で追加 */
+.nrm {
+  font-weight: normal;
+} /* 標準太さのフォント */
+.keyword1 {
+  font-weight: bold;
+  color: #000080;
+}
+.cyclist {
+  font-weight: bold;
+} /* article40,45 で追加 */
 
 /* --- 競り・飛び付きランキング表 --- */
-table.rnktbl5{ 
-  margin:10px 0px 50px 10px;
-  font-size:15px;
+table.rnktbl5 {
+  margin: 10px 0px 50px 10px;
+  font-size: 15px;
 }
-table.rnktbl5 caption{ 
-  font-weight:normal;
+table.rnktbl5 caption {
+  font-weight: normal;
 }
-table.rnktbl5 th{
-  white-space:nowrap;
-  min-width:17px;
-  padding:3px 5px;
+table.rnktbl5 th {
+  white-space: nowrap;
+  min-width: 17px;
+  padding: 3px 5px;
 }
-table.rnktbl5 td{
-  white-space:nowrap;
-  padding:3px 6px;
+table.rnktbl5 td {
+  white-space: nowrap;
+  padding: 3px 6px;
 }
-table.rnktbl5 td.npadd{
-  padding-left:3px;
-  padding-right:3px;
+table.rnktbl5 td.npadd {
+  padding-left: 3px;
+  padding-right: 3px;
 }
-table.rnktbl5 th, table.rnktbl5 td{ border:1px solid darkgray; }
-table.rnktbl5 tr:nth-child(1) th:nth-child(n+6):nth-child(-n+8){ border-right:1px solid black; }
-table.rnktbl5 tr:nth-child(2) th:nth-child(3n-1):nth-child(n+8):nth-child(-n+14){ border-right:1px solid black; }
-table.rnktbl5 td:nth-child(3n+1):nth-child(n+13):nth-child(-n+19){ border-right:1px solid black; }
-table.rnktbl5{  border: double 1px black}
+table.rnktbl5 th,
+table.rnktbl5 td {
+  border: 1px solid darkgray;
+}
+table.rnktbl5 tr:nth-child(1) th:nth-child(n + 6):nth-child(-n + 8) {
+  border-right: 1px solid black;
+}
+table.rnktbl5
+  tr:nth-child(2)
+  th:nth-child(3n-1):nth-child(n + 8):nth-child(-n + 14) {
+  border-right: 1px solid black;
+}
+table.rnktbl5 td:nth-child(3n + 1):nth-child(n + 13):nth-child(-n + 19) {
+  border-right: 1px solid black;
+}
+table.rnktbl5 {
+  border: double 1px black;
+}
 
-table.rnktbl5 tr:nth-child(2) th{ font-size:94%; }   /*   2行目の th は小さい文字 */
-table.rnktbl5 tr:nth-child(1) th:nth-child(4){  line-height:1.25; }   /*  府県＋年齢の行間は狭め                    2024.7 追加 */
-table.rnktbl5 tr:nth-child(1) th:nth-child(4) span{ font-size: 86%; } /*  府県＋年齢の ’年齢' の文字サイズは小さめ 2024.7 追加 */
-table.rnktbl5 tr:nth-child(1) th:nth-child(5){  line-height:1.25; }   /*  今回および次期の級班の行間は狭め   */
-table.rnktbl5 td:nth-child(2){                       /*  選手名 */
-  min-width: 5.5em;                                  /*    全漢字4文字以下でも5文字程度の幅は欲しい */
-  text-align:left;
-}
-table.rnktbl5 td:nth-child(3){                       /*  期  */
-  min-width:1.8em;                                   /*    全2桁以下でも3桁の幅は欲しい  2024.7  1.9em -> 1.8em */
-}
-table.rnktbl5 td:nth-child(4) span{                   /* rnktbl5 の td の 年齢の文字サイズと padding : 2024.7 追加 */
+table.rnktbl5 tr:nth-child(2) th {
+  font-size: 94%;
+} /*   2行目の th は小さい文字 */
+table.rnktbl5 tr:nth-child(1) th:nth-child(4) {
+  line-height: 1.25;
+} /*  府県＋年齢の行間は狭め                    2024.7 追加 */
+table.rnktbl5 tr:nth-child(1) th:nth-child(4) span {
   font-size: 86%;
-  padding-left:0.3em;
+} /*  府県＋年齢の ’年齢' の文字サイズは小さめ 2024.7 追加 */
+table.rnktbl5 tr:nth-child(1) th:nth-child(5) {
+  line-height: 1.25;
+} /*  今回および次期の級班の行間は狭め   */
+table.rnktbl5 td:nth-child(2) {
+  /*  選手名 */
+  min-width: 5.5em; /*    全漢字4文字以下でも5文字程度の幅は欲しい */
+  text-align: left;
+}
+table.rnktbl5 td:nth-child(3) {
+  /*  期  */
+  min-width: 1.8em; /*    全2桁以下でも3桁の幅は欲しい  2024.7  1.9em -> 1.8em */
+}
+table.rnktbl5 td:nth-child(4) span {
+  /* rnktbl5 の td の 年齢の文字サイズと padding : 2024.7 追加 */
+  font-size: 86%;
+  padding-left: 0.3em;
 }
 
-table.rnktbl5 td:nth-child(5) span{
-	font-size:86%;                                   /* 次期の級班は 小さ目の文字 */
-	padding-left:0.15em;                              /* 級班・級班間の '/' の両側に 若干のスペース   2024.7.29 add */
+table.rnktbl5 td:nth-child(5) span {
+  font-size: 86%; /* 次期の級班は 小さ目の文字 */
+  padding-left: 0.15em; /* 級班・級班間の '/' の両側に 若干のスペース   2024.7.29 add */
 }
-table.rnktbl5 td:nth-child(n+7):nth-child(-n+8){     /* 競込み-連絡み , 飛付き-連絡み */
-	letter-spacing:0.05em;                           /*    文字間隔をちょっと広め */
+table.rnktbl5 td:nth-child(n + 7):nth-child(-n + 8) {
+  /* 競込み-連絡み , 飛付き-連絡み */
+  letter-spacing: 0.05em; /*    文字間隔をちょっと広め */
 }
-table.rnktbl5 td:nth-child(9){                       /* 競走得点 */
-  min-width:3.0em;                                   /*    全99点以下でも100点の幅は欲しい */
-  text-align:right;
+table.rnktbl5 td:nth-child(9) {
+  /* 競走得点 */
+  min-width: 3em; /*    全99点以下でも100点の幅は欲しい */
+  text-align: right;
 }
-table.rnktbl5 td:nth-child(10){                      /* 1着数 2着数 */
-  text-align:right;
+table.rnktbl5 td:nth-child(10) {
+  /* 1着数 2着数 */
+  text-align: right;
 }
-table.rnktbl5 td:nth-child(10) span{
-  display:inline-block;
-  width:1.6em;
+table.rnktbl5 td:nth-child(10) span {
+  display: inline-block;
+  width: 1.6em;
 }
-table.rnktbl5 span.t-narrow{                         /* 級班の「2023前/2023後」や 脚質「逃・両」の 縦長文字 */
-  display:inline-block;
-  transform: scale(0.8, 1); 
-  margin-left:-5px;
-  margin-right:-5px;
+table.rnktbl5 span.t-narrow {
+  /* 級班の「2023前/2023後」や 脚質「逃・両」の 縦長文字 */
+  display: inline-block;
+  transform: scale(0.8, 1);
+  margin-left: -5px;
+  margin-right: -5px;
 }
-table.rnktbl5 .lhr{                                  /* th の 3行部分で使用している "改行幅 小さく"の指示 */
-  line-height:1.1;                                   /*  2024.7    1.15 -> 1.1  */
-  padding-top:4px;
-  padding-bottom:4px;
+table.rnktbl5 .lhr {
+  /* th の 3行部分で使用している "改行幅 小さく"の指示 */
+  line-height: 1.1; /*  2024.7    1.15 -> 1.1  */
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
-table.rnktbl5 span.all{                              /* th で使用の "左寄せ文字" の指示 */
-  display:inline-block;
-  width:100%;
-  text-align:left;
-  margin:0;
+table.rnktbl5 span.all {
+  /* th で使用の "左寄せ文字" の指示 */
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin: 0;
   padding: 0 0 0 2px;
 }
-table.rnktbl5 span.alr{                              /* th で使用の "右寄せ文字" の指示 */
-  display:inline-block;
-  width:100%;
-  text-align:right;
-  margin:0;
+table.rnktbl5 span.alr {
+  /* th で使用の "右寄せ文字" の指示 */
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  margin: 0;
   padding: 0 2px 0 0;
 }
-table.rnktbl5 .sml{ font-size:94%; }                  /* rnktbl5 内の"小さい文字" の指示 */
+table.rnktbl5 .sml {
+  font-size: 94%;
+} /* rnktbl5 内の"小さい文字" の指示 */
 
 /* --用語説明の div ------ */
-#glossary{
+#glossary {
   margin: 0px 0px 35px 0px;
-  padding:0px;
+  padding: 0px;
 }
 
-div.rnknt1{
-  max-width:1000px; 
-  margin-left:10px;
-  margin-bottom:22px;
-  padding:3px;
-  font-size:14px;
+div.rnknt1 {
+  max-width: 1000px;
+  margin-left: 10px;
+  margin-bottom: 22px;
+  padding: 3px;
+  font-size: 14px;
   border: 1px dotted darkslategray;
 }
-div.rnknt1 dl{
-  margin:0;
-  padding:5px 7px;
+div.rnknt1 dl {
+  margin: 0;
+  padding: 5px 7px;
 }
-div.rnknt1 dl dt{
-  margin:0;
-  margin-bottom:1px;
-  padding:0;
+div.rnknt1 dl dt {
+  margin: 0;
+  margin-bottom: 1px;
+  padding: 0;
 }
-div.rnknt1 dl dd{
-  margin-top:0;
-  margin-left:18px;
-  margin-bottom:4px;
-  padding:0;
+div.rnknt1 dl dd {
+  margin-top: 0;
+  margin-left: 18px;
+  margin-bottom: 4px;
+  padding: 0;
 }
 
-div.rnknt1 ul{
-  list-style-type:disc;
-  margin:0.3em 1em 0.3em 0;
+div.rnknt1 ul {
+  list-style-type: disc;
+  margin: 0.3em 1em 0.3em 0;
   padding-left: 2em;
 }
-div.rnknt1 ul li{
+div.rnknt1 ul li {
   margin: 0.5em 2em 0.2em 0;
-  text-indent: 0em;           /* 本文内に ・等のマーク1文字を想定 */
-  padding-left:0;
+  text-indent: 0em; /* 本文内に ・等のマーク1文字を想定 */
+  padding-left: 0;
 }
-div.rnknt1  span.pstd{                   /*    rnknt1 内で使用   背景色をやや広く */
-  padding:1px 2px;
+div.rnknt1 span.pstd {
+  /*    rnknt1 内で使用   背景色をやや広く */
+  padding: 1px 2px;
 }
 /* ---- 背景色 -------------------- */
-table.rnktbl5 .lhs{ background-color:#c1d0d3; }                                   /* ランクテーブル  競り込みのth */
-table.rnktbl5 .lht{ background-color:#c6d6c5; }                                   /* ランクテーブル  飛び付きのth */
-table.rnktbl5 .bkj1, div.rnknt1 .bkj1{ background-color:#ffffd0; }                /* 選手名背景色-1 */
-table.rnktbl5 .bkj2, div.rnknt1 .bkj2{ background-color:#d0ffd0; }                /* 選手名背景色-2 */
-table.rnktbl5 .bkj3, div.rnknt1 .bkj3{ background-color:#f4d8d8; }                /* 選手名背景色-3 */
-table.rnktbl5 .lis3, div.rnknt1 .lis3{  background-color:#c2c2ff; }                          /* 競込みベスト3    */
-table.rnktbl5 .lis4, div.rnknt1 .lis4{  background-color:#e5e5f9; }                          /* 競込み4位以下のランクイン */
-table.rnktbl5 .lit3, div.rnknt1 .lit3{  background-color:#b2edb2; }                          /* 飛付きベスト3    */
-table.rnktbl5 .lit4, div.rnknt1 .lit4{  background-color:#dffbe0; }                       /* 飛付き4位以下のランクイン */
+table.rnktbl5 .lhs {
+  background-color: #c1d0d3;
+} /* ランクテーブル  競り込みのth */
+table.rnktbl5 .lht {
+  background-color: #c6d6c5;
+} /* ランクテーブル  飛び付きのth */
+table.rnktbl5 .bkj1,
+div.rnknt1 .bkj1 {
+  background-color: #ffffd0;
+} /* 選手名背景色-1 */
+table.rnktbl5 .bkj2,
+div.rnknt1 .bkj2 {
+  background-color: #d0ffd0;
+} /* 選手名背景色-2 */
+table.rnktbl5 .bkj3,
+div.rnknt1 .bkj3 {
+  background-color: #f4d8d8;
+} /* 選手名背景色-3 */
+table.rnktbl5 .lis3,
+div.rnknt1 .lis3 {
+  background-color: #c2c2ff;
+} /* 競込みベスト3    */
+table.rnktbl5 .lis4,
+div.rnknt1 .lis4 {
+  background-color: #e5e5f9;
+} /* 競込み4位以下のランクイン */
+table.rnktbl5 .lit3,
+div.rnknt1 .lit3 {
+  background-color: #b2edb2;
+} /* 飛付きベスト3    */
+table.rnktbl5 .lit4,
+div.rnknt1 .lit4 {
+  background-color: #dffbe0;
+} /* 飛付き4位以下のランクイン */
 
-table.rnktbl5 .nige2, div.rnknt1 .nige2{ background-color:#fadfd5; padding-letf: 2px; padding-right: 2px; }     /* バック取得率 20%越 */
-table.rnktbl5 .nige4, div.rnknt1 .nige4{ background-color:#f3ab90; padding-letf: 2px; padding-right: 2px; }     /* バック取得率 40%越 */
-
+table.rnktbl5 .nige2,
+div.rnknt1 .nige2 {
+  background-color: #fadfd5;
+  padding-right: 2px;
+  padding-left: 2px;
+} /* バック取得率 20%越 */
+table.rnktbl5 .nige4,
+div.rnknt1 .nige4 {
+  background-color: #f3ab90;
+  padding-right: 2px;
+  padding-left: 2px;
+} /* バック取得率 40%越 */

@@ -220,12 +220,10 @@ div.rnknt1 {
   max-width: 1000px;
   margin-left: 10px;
   margin-bottom: 22px;
-  padding: 20px;
+  padding: 15px;
   font-size: 15px;
-  border: 1px solid #e0e0e0;
-  background-color: #fcfcfc;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  border: 1px dotted #555; /* color調整 */
+  background-color: #fff;
 }
 
 div.rnknt1 dl {
@@ -234,17 +232,15 @@ div.rnknt1 dl {
 }
 div.rnknt1 dl dt {
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   padding: 0;
   font-weight: bold;
   color: #003366;
-  border-left: 4px solid #003366;
-  padding-left: 10px;
 }
 div.rnknt1 dl dd {
   margin-top: 0;
-  margin-left: 14px;
-  margin-bottom: 16px;
+  margin-left: 18px;
+  margin-bottom: 12px;
   padding: 0;
   line-height: 1.6;
 }
@@ -259,213 +255,175 @@ div.rnknt1 ul li {
   line-height: 1.6;
 }
 div.rnknt1 span.pstd {
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.9em;
-  font-weight: bold;
+  padding: 1px 4px;
+  border-radius: 2px;
 }
 
-/* ---------------------------------------------- */
-/* モダンなランキングテーブル (table.rnktbl5)     */
-/* ---------------------------------------------- */
+/* ランキングテーブル (table.rnktbl5) */
 table.rnktbl5 {
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 30px auto 50px auto;
-  font-size: 14px;
+  border-collapse: collapse;
+  margin: 20px auto 50px auto; /* センタリングに変更 */
+  font-size: 14px; /* 少し小さめに調整 */
   width: 100%;
   max-width: 100%;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  overflow: hidden; /* 角丸を効かせるため */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.03);
-  background-color: #fff;
+  border: double 3px #333; /* 外枠を強調 */
 }
 
 table.rnktbl5 caption {
   font-weight: bold;
-  margin: 0 0 12px 5px;
+  margin: 0 0 8px 3px;
   text-align: left;
-  font-size: 18px;
-  color: #003366;
-  padding-left: 5px;
-  border-left: 5px solid #003366;
-  line-height: 1.2;
+  font-size: 16px;
+  color: #333;
 }
 
-/* ヘッダーのスタイル */
 table.rnktbl5 th {
-  background-color: #003366;
-  color: #ffffff;
-  font-weight: bold;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #eaece6;
+  font-weight: normal;
+  border: 1px solid #666;
   white-space: nowrap;
-  padding: 12px 8px;
+  padding: 6px 4px;
   vertical-align: middle;
-  text-align: center !important; /* 中央揃えを強制 */
 }
 
-table.rnktbl5 th:last-child {
-  border-right: none;
-}
-
-/* ヘッダー2行目（詳細ヘッダ） */
-table.rnktbl5 tr:nth-child(2) th {
-  background-color: #004080; /* 少し明るい紺色 */
-  font-size: 90%;
-  padding: 8px 6px;
-}
-
-/* セルのスタイル */
 table.rnktbl5 td {
-  border-bottom: 1px solid #e5e7eb;
-  border-right: 1px solid #e5e7eb;
+  border: 1px solid #666;
   white-space: nowrap;
-  padding: 10px 8px;
+  padding: 6px 4px;
   text-align: center;
   vertical-align: middle;
-  color: #374151;
-  transition: background-color 0.2s;
 }
 
-table.rnktbl5 td:last-child {
-  border-right: none;
-}
-
-table.rnktbl5 tr:last-child td {
-  border-bottom: none;
-}
-
-/* 行のホバーエフェクトとストライプ */
-table.rnktbl5 tr:nth-child(even) td {
-  background-color: #f9fafb;
-}
-
-table.rnktbl5 tr:hover td {
-  background-color: #eff6ff !important; /* ホバー時は優先的に薄い青 */
-}
-
-/* 特定の列の調整 */
-table.rnktbl5 td:nth-child(2) {
-  /* 選手名 */
-  text-align: left;
-  font-weight: 600;
-  min-width: 7em;
-  color: #111;
-}
-
-table.rnktbl5 td:nth-child(9) {
-  /* 競走得点 */
-  text-align: right;
-  font-family: "Roboto Mono", monospace;
-  font-weight: bold;
-  color: #003366;
-  padding-right: 12px;
-}
-
-table.rnktbl5 td:nth-child(10) {
-  /* 1着 2着 */
-  text-align: right;
-  padding-right: 10px;
-  vertical-align: middle;
-}
-
-/* 1着数・2着数を改行して表示 */
-table.rnktbl5 td:nth-child(10) span {
-  display: block;
-  line-height: 1.4;
-  text-align: center;
-}
-
-/* セル内の微調整用クラス */
+/* セルの微調整 */
 table.rnktbl5 td.npadd {
   padding-left: 2px;
   padding-right: 2px;
 }
 
-/* 縦長文字の調整 */
-table.rnktbl5 span.t-narrow {
-  display: inline-block;
-  transform: scale(0.9, 1);
-  letter-spacing: -1px;
+/* 罫線の強調 (art68.cssのロジックを継承) */
+table.rnktbl5 tr:nth-child(1) th:nth-child(n + 6):nth-child(-n + 8) {
+  border-right: 2px solid #333;
+}
+table.rnktbl5
+  tr:nth-child(2)
+  th:nth-child(3n-1):nth-child(n + 8):nth-child(-n + 14) {
+  border-right: 2px solid #333;
+}
+table.rnktbl5 td:nth-child(3n + 1):nth-child(n + 13):nth-child(-n + 19) {
+  border-right: 2px solid #333;
 }
 
-/* ヘッダー内テキスト調整 */
-table.rnktbl5 span.all,
+/* フォントサイズ調整 */
+table.rnktbl5 tr:nth-child(2) th {
+  font-size: 90%;
+}
+table.rnktbl5 tr:nth-child(1) th:nth-child(4) {
+  line-height: 1.25;
+}
+table.rnktbl5 tr:nth-child(1) th:nth-child(4) span {
+  font-size: 85%;
+}
+table.rnktbl5 tr:nth-child(1) th:nth-child(5) {
+  line-height: 1.25;
+}
+
+/* 列ごとのスタイル */
+table.rnktbl5 td:nth-child(2) {
+  /* 選手名 */
+  text-align: left;
+  font-weight: 500;
+  min-width: 6em;
+}
+table.rnktbl5 td:nth-child(9) {
+  /* 競走得点 */
+  text-align: right;
+  font-family: monospace; /* 数字を見やすく */
+  padding-right: 8px;
+}
+table.rnktbl5 td:nth-child(10) {
+  /* 1着 2着 */
+  text-align: right;
+}
+table.rnktbl5 td:nth-child(10) span {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+
+/* 縦長文字クラスのシミュレーション (scale使用) */
+table.rnktbl5 span.t-narrow {
+  display: inline-block;
+  transform: scale(0.85, 1);
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+/* ヘッダー内装飾 */
+table.rnktbl5 .lhr {
+  line-height: 1.1;
+  font-size: 90%;
+}
+table.rnktbl5 span.all {
+  display: block;
+  text-align: left;
+  font-size: 90%;
+}
 table.rnktbl5 span.alr {
   display: block;
-  text-align: center; /* ヘッダー内は全て中央揃え */
-  width: 100%;
+  text-align: right;
+  font-size: 90%;
 }
 table.rnktbl5 .sml {
   font-size: 85%;
-  font-weight: normal;
-  opacity: 0.9;
 }
 
-/* 背景色クラス（モダンな色合いに調整） */
-/* 競り込み・飛び付きヘッダーの強調色 */
+/* 背景色クラス (art68.cssより) */
 table.rnktbl5 .lhs {
-  background-color: #4a6fa5 !important;
-}
+  background-color: #c1d0d3;
+} /* 競り込みヘッダ */
 table.rnktbl5 .lht {
-  background-color: #5a8e7a !important;
-}
+  background-color: #c6d6c5;
+} /* 飛び付きヘッダ */
 
-/* 選手名背景 */
 .bkj1 {
-  background-color: #fff9c4 !important;
-} /* 薄黄色 */
+  background-color: #ffffd0;
+} /* 選手背景1 */
 .bkj2 {
-  background-color: #dcedc8 !important;
-} /* 薄緑 */
+  background-color: #d0ffd0;
+} /* 選手背景2 */
 .bkj3 {
-  background-color: #ffcdd2 !important;
-} /* 薄ピンク */
+  background-color: #f4d8d8;
+} /* 選手背景3 */
 
-/* ランクイン強調 */
 .lis3 {
-  background-color: #e8eaf6 !important;
-  color: #1a237e;
-  font-weight: bold;
+  background-color: #c2c2ff;
 } /* 競込みベスト3 */
 .lis4 {
-  background-color: #f5f5f5 !important;
+  background-color: #e5e5f9;
 } /* 競込み4位以下 */
 .lit3 {
-  background-color: #e0f2f1 !important;
-  color: #004d40;
-  font-weight: bold;
+  background-color: #b2edb2;
 } /* 飛付きベスト3 */
 .lit4 {
-  background-color: #f1f8e9 !important;
+  background-color: #dffbe0;
 } /* 飛付き4位以下 */
 
-/* 脚質などの強調 */
 .nige2 {
-  background-color: #ffccbc !important;
-  padding: 2px 5px;
-  border-radius: 4px;
-}
+  background-color: #fadfd5;
+} /* バック20% */
 .nige4 {
-  background-color: #ffab91 !important;
-  padding: 2px 5px;
-  border-radius: 4px;
-  color: #bf360c;
-  font-weight: bold;
-}
+  background-color: #f3ab90;
+} /* バック40% */
 
-/* テーブルスクロールラッパー */
+/* テーブルスクロールラッパー (index.htmlと共通化) */
 .table-scroll {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin-bottom: 30px;
-  padding-bottom: 5px; /* スクロールバーのための余白 */
+  margin-bottom: 20px;
 }
 .table-scroll table.rnktbl5 {
-  min-width: 900px;
+  min-width: 800px; /* 横スクロール発生幅 */
 }
 
 /* ---------------------------------------------- */
